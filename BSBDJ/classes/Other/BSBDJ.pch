@@ -1,0 +1,51 @@
+//
+//  BSBDJ.pch
+//  BSBDJ
+//
+//  Created by FanrongZeng on 2018/3/11.
+//  Copyright © 2018年 FanrongZeng. All rights reserved.
+//
+
+#ifdef __OBJC__
+
+#import "UIView+FRFrame.h"
+#import "UIBarButtonItem+Item.h"
+#import "GlobeConst.h"
+#import "UIView+xib.h"
+
+#define FRScreenW [UIScreen mainScreen].bounds.size.width
+#define FRScreenH [UIScreen mainScreen].bounds.size.height
+
+#define FRColor(r, g, b) [UIColor colorWithRed:(r) / 255.0 green:(g) / 255.0 blue:(b) / 255.0 alpha:1]
+
+#define FRRandomColor FRColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+//在宏当中多个参数...
+//函数当中多个参数__VA_ARGS__
+
+
+#define FRFunc FRLOG(@"%s",__func__)
+
+
+#ifdef DEBUG
+
+#define FRLOG(...) NSLog(__VA_ARGS__)
+
+#else
+
+#define FRLOG(...)
+
+#endif
+
+
+#endif
+
+
+/*****屏幕适配****************/
+
+#define iPhone6P ([UIScreen mainScreen].bounds.size.height == 736)
+#define iPhone6 ([UIScreen mainScreen].bounds.size.height == 667)
+#define iPhone5 ([UIScreen mainScreen].bounds.size.height == 568)
+#define iPhone4 ([UIScreen mainScreen].bounds.size.height == 480)
+
+/*****屏幕适配****************/

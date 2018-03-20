@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="17D102" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FRMeCell">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="119"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="119"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sBJ-fs-fgq">
+                        <rect key="frame" x="30" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="4UO-Wl-jYS"/>
+                            <constraint firstAttribute="width" constant="60" id="Rh1-0u-uB2"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBx-wD-a7y">
+                        <rect key="frame" x="42" y="91" width="37.5" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="sBJ-fs-fgq" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="KoB-So-e6X"/>
+                <constraint firstItem="KBx-wD-a7y" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Q9i-PL-nDu"/>
+                <constraint firstItem="sBJ-fs-fgq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Zta-O0-H0x"/>
+                <constraint firstAttribute="bottom" secondItem="KBx-wD-a7y" secondAttribute="bottom" constant="10" id="sW8-6D-3nK"/>
+            </constraints>
+            <size key="customSize" width="120" height="119"/>
+            <connections>
+                <outlet property="iconImgeView" destination="sBJ-fs-fgq" id="qp3-NX-7V2"/>
+                <outlet property="name" destination="KBx-wD-a7y" id="h5r-L6-L1d"/>
+            </connections>
+            <point key="canvasLocation" x="3" y="-47"/>
+        </collectionViewCell>
+    </objects>
+</document>
