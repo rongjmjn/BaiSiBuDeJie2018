@@ -28,9 +28,22 @@ static NSString * const ID = @"FRTopicCellID";
 /**模型数组*/
 @property (strong,nonatomic) NSMutableArray *topicsItem;
 
+/** 写这个声明只是为了点语法 */
+- (NSString *)listType;
+
 @end
 
 @implementation FRTopicTableViewController
+/** 判断是精华页面还是新帖页面 */
+- (NSString *)listType{
+    
+    if ([@"FREssenceViewController" isEqualToString:NSStringFromClass(self.parentViewController.class)]) return @"list";
+        
+    if ([@"FRNewViewController" isEqualToString:NSStringFromClass(self.parentViewController.class)]) return @"newlist";
+    
+    return nil;
+}
+
 /**实现这个方法是仅仅是要消除警告*/
 - (FRTopicType)type {return 0;}
 
@@ -100,7 +113,7 @@ static NSString * const ID = @"FRTopicCellID";
     
     //拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    parameters[@"a"] = self.listType;
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.type);
     
@@ -132,7 +145,7 @@ static NSString * const ID = @"FRTopicCellID";
 - (void)loadMoreData{
     //拼接参数
     NSMutableDictionary *parameters = [NSMutableDictionary dictionary];
-    parameters[@"a"] = @"list";
+    parameters[@"a"] = self.listType;
     parameters[@"c"] = @"data";
     parameters[@"type"] = @(self.type);
     parameters[@"maxtime"] = self.maxtime;

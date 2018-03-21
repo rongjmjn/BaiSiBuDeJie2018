@@ -6,8 +6,8 @@
 //  Copyright © 2018年 FanrongZeng. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "FREssenceViewController.h"
 
-@interface FRNewViewController : UIViewController
+@interface FRNewViewController : FREssenceViewController
 
 @end
